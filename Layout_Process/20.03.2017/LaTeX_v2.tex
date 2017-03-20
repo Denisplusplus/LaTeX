@@ -8,9 +8,61 @@
 \begin{document}
 	Все сказанное переносится и на случай функций любого числа переменных.
 	
-	Теорема 1'. Если функция n переменных $y = f(x_1, ..., x_n)$ определена и непрерывна вместе
+	\textit{\textbf{Теорема 1'}. Если функция n переменных $y = f(x_1, ..., x_n)$ определена и непрерывна вместе
 	со всеми своими частными производными до порядка m включительно в некоторой окрестности точки
-	$x^{(0)}$ = $(x_{i}^{(0)})^{*)}$, то справедлива формула \\
-	$\Delta y = f(x_{1}^{(0)} + \Delta x_{1}, ..., x_{n}^{(0)}+\Delta x_{n}) - f(x_{1}^{(0)}, ...,  x_{n}^{(0)}) = \\ = \sum\limits_{k = 1}^{m-1} \frac{1}{k!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + \frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{k\}} f(x^{(0)}) + r_{m-1} (\Delta x) $, (39.18)
- 
+	$x^{(0)}$ = $(x_{i}^{(0)})^{*)}$, то справедлива формула}
+	\begin{center}
+		$\Delta y = f(x_{1}^{(0)} + \Delta x_{1}, ..., x_{n}^{(0)}+\Delta x_{n}) - f(x_{1}^{(0)}, ...,  x_{n}^{(0)}) =$ 
+	\end{center}
+
+	\begin{center}	
+		$= \sum\limits_{k = 1}^{m-1} \frac{1}{k!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... +\frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{k\}} f(x^{(0)}) + r_{m-1} (\Delta x) $, 
+		(39.18)		
+	\end{center}
+	
+	\noindent где
+	\begin{center}
+		$r_{m-1}(\Delta x) =$
+	\end{center} 	
+	\begin{center}	
+		$=\frac{1}{m!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... + \frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{m\}} f(x_{1}^{(0)} + \theta \Delta x_1, ...,x_{n}^{(0)} + \theta \Delta x_n )$
+	\end{center} 
+	\begin{center}
+		$0 < \theta < 1, \Delta x = (\Delta x_1, ...,\Delta x_n)$
+		(39.19)
+	\end{center} 
+		
+	\noindent а также формула
+	
+	 \begin{center}
+	$\Delta y  = \sum\limits_{k = 1}^{m} \frac{1}{k!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... +\frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{k\}} f(x^{(0)}) + r_{m} (\Delta x) $, (39.20)
+	\end{center}
+	\noindent где $r_{m} (\Delta x) $ можно записать в каждом из следующих видов:
+	
+	либо 
+	\begin{center}
+		$r_{m}(\Delta x) = \sum\limits_{m_1+ ... +m_n = m} \varepsilon_{m_1 ... m_n}(\Delta x) 
+		\Delta x_1^{m_1} ... \Delta x_n^{m_n} $, (39.21)
+	\end{center} 	
+	\noindent где
+	$$\lim_{\rho \to 0} \varepsilon_{m_1, ..., m_n}(\Delta x) = 0, 
+	\rho = \sqrt{\sum\limits_{i=1}^n \Delta x_i^{2}},$$
+	
+	либо 
+	
+	$$r_{m} (\Delta x) = \varepsilon (\Delta x) \rho^m, \lim_{\rho \to 0} \varepsilon(\Delta x) = 0, ~~~~~(39.22) $$
+	
+	\noindent т.е. 	
+	\begin{center}
+		$r_{m} (\Delta x) = o(\rho^m), \rho \to 0$.
+	\end{center}
+
+	Наконец, через дифференциалы формулу (39.20) можно записать в виде
+	\begin{center}
+		$\Delta y = \sum\limits_{k = 1}^{m} \frac{1}{k!} d^k f(x^{(0)}) + r_{m} (\Delta x) $. (39.23)
+	\end{center}
+	\line(1,0){51}
+
+	*) Эти ограничения можно несколько ослабить аналогично тому, как это было указано выше в случае функций двух переменных.
+		 
 \end{document}
