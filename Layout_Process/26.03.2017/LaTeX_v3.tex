@@ -1,0 +1,135 @@
+\documentclass[10pt]{book}
+\usepackage[a5paper,top=54pt,bottom=54pt,left=48pt,right=48pt]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{pscyr}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{caption2}
+\usepackage{soulutf8,soul}
+\usepackage{setspace}
+\usepackage{fancybox,fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[LE,RO]{\textbf{\thepage}}
+\fancyhead[RE]{\textit{\textsection 39. Формула Тейлора и ряд Тейлора}}
+\fancyhead[LO]{\textit{\textsection 39.1. Формула Тейлора для функций многих переменных}}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\usepackage{amssymb}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\setcounter{page}{8}
+\usepackage{pgfpages}
+\pgfpagesuselayout{2 on 1} [a4paper,landscape,border shrink=5pt]
+
+%font
+\fontfamily{lh}
+\selectfont
+
+
+\begin{document}
+
+	\begin{spacing}{0.96}
+	   \noindent реценирования сложной функции, если их аргументы, как и в (39.3), \linebreak
+	   линейно зависят от \textit {t}. Поэтому приведенное выше доказательство \linebreak
+	   формулы Тейлора полностью сохраняется и для этого случая.
+	   
+	   Формулу Тейлора (39.1) можно доказать и при еще более слабых \linebreak
+	   ограничениях, однако это потребовало бы более тонкого доказатель-\linebreak
+	   ства, и мы не будем на этом останавливаться (для случая одной пере-\linebreak
+	   менной см. упражнение 1 в \S 13).
+	 
+	   Формулу (39.1) можно несколько обобщить и в другом смысле: \linebreak
+	   не требовать, чтобы функция \textit {f} была определена во всех точках не- \linebreak
+	   которой окрестности точки ($x_0$, $y_0$), а рассматривать эту формулу \linebreak
+	   лишь при фиксированных $\Delta x$ и $\Delta y$. Именно если функция \textit {f} опреде
+	   лена и имеет дифференцируемые частные производные до порядка \linebreak
+	   \textit {m} \textemdash~1 включительно в каждой точке отрезка с концами в точках \linebreak
+	   ($x_0$, $y_0$) и ($x_0$ +  $\Delta x$, $y_0$ + $\Delta y$), то формула (39.1) также остается спра-
+	    \linebreak ведливой вместе с доказательством.
+	   
+	   Из всего сказанного следует, что если функция \textit {f} определена в выпуклой области \textit {G} (см. п. 18.2) и имеет \textit{G} дифференцируемые частные производные порядка \textit {m} \textemdash~1, то для любых двух точек ($x_0$, $y_0$) $\in$ \textit {G} \linebreak
+	   и ($x_0$ +  $\Delta x$, $y_0$ + $\Delta y$) $\in$ \textit{G} имеет место формула Тейлора (39.1).
+	   
+	   Для справедливости же формулы Тейлора (39.9), кроме диффе- \linebreak
+	   ренцируемости производных порядка \textit {m} \textemdash~1 в окрестности точки \linebreak
+	   ($x_0$, $y_0$), достаточно лишь потребовать, чтобы производные порядка m
+	   были непрерывны только в точке ($x_0$, $y_0$).
+	   
+	   Мы не стали всего этого сразу оговаривать для простоты форму-\linebreak
+	   лировок и доказательств теоремы 1 и ее следствия.
+		
+		Подчеркнем еще, что в формуле (39.9) $r_m$($\Delta x$, $\Delta y$) = $o(p^m)$ \linebreak
+		не в смысле предела по любому фиксированному направлению, как мо- \linebreak
+		жет показатьсяна первый взгляд из приведенного доказательства,\linebreak
+		а в более сильном смысле, в смысле предела в точке  ($x_0$, $y_0$) (почему?).
+	\end{spacing}		
+		\setlength{\parskip}{0.05cm}
+	\begin{spacing}{0.9}
+		\footnotesize{\so{Упражнение 1.} Пусть функция \textit {f}$(x, y)$ определена и непрерывна \linebreak
+		вместе со своими частными производными до порядка \textit {m}  включительно в не- \linebreak
+		которой окрестности точки ($x_0$, $y_0$). Доказать, что ее \textit {многочлен Тейлора} по- \linebreak рядка \textit {m}, т. е. многочлен \scriptsize{
+		$$\textit{P(x, y)} = \sum\limits_{k = 0}^m \frac{1}{k!} \bigl[(x- x_0) \frac{\partial}{\partial x} + (y- y_0) \frac{\partial}{\partial y}\bigr]^{\{k\}} \textit {f}(x_0, y_0) ,$$}
+	
+		\noindent является многочленом наилучшего приближения функции $\textit{f}(x, y)$ <<в беско- \linebreak
+		нечно малой окрестности точки ($x_0$, $y_0$)>>. Это означает следующее: каков бы ни \linebreak
+		был многочлен $Q(x, y)$ степени не больше \textit {m} (в каждом его члене сумма показа- \linebreak
+		телей степени y переменных x и y должна не превышать числа \textit{m}) такой, что
+		 \scriptsize{	$$\textit {f(x, y)} = \textit{Q(x, y) + $o(p^m)$,\quad n $\geq$ m,}$$}
+		\noindent где  \scriptsize{ $$p=\sqrt{(x - x_0)^2 + (y-y_0)^2,}$$ } он совпадает с узказанным многолченом Тейлора $P(x, y)$ функции  \textit{f(x,y)}. 
+		}
+	\end{spacing}	
+	 %---------------------------------------------------------------------------------------------------------
+	    Все сказанное переносится и на случай функций любого чис- \linebreak
+	    ла переменных.
+	   
+	    \textit{\textbf{Теорема 1$'$.} Если функция n переменных $y = \textit{f}(x_1, ..., x_n)$ \linebreak определена и непрерывна вместе со всеми своими частными производ- \linebreak
+	    ными до порядка \textit {m} включительно в некоторой окрестности точки
+	    	$x^{(0)}$ = $(x_{i}^{(0)})^{*)}$, то справедлива формула}
+	   
+	\begin{spacing}{0.5}
+	   
+	    	$$\Delta y = \textit{f}(x_{1}^{(0)} + \Delta x_{1}, ..., x_{n}^{(0)}+\Delta x_{n}) - \textit{f}(x_{1}^{(0)}, ...,  x_{n}^{(0)}) = $$
+	    	$$ = \sum\limits_{k = 1}^{m-1} \frac{1}{k!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... +\frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{k\}} \textit{f}(x^{(0)}) + r_{m-1} (\Delta x), \eqno(39.18) $$ 
+	
+	    \noindent \textit {где}
+	    	$$r_{m-1}(\Delta x) =$$	
+	    	$$=\frac{1}{m!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... + \frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{m\}} \textit{f}(x_{1}^{(0)} + \theta \Delta x_1, ...,x_{n}^{(0)} + \theta \Delta x_n )$$
+	  
+	    	$$0 < \theta < 1, \quad \Delta x = (\Delta x_1, ...,\Delta x_n) 	\eqno (39.19)$$
+	    %\end{spacing}
+	    
+	    \noindent \textit {а также формула}
+	    	$$\Delta y  = \sum\limits_{k = 1}^{m} \frac{1}{k!} \bigl( \frac{\partial}{\partial x_1} \Delta x_1 + ... +\frac{\partial}{\partial x_n} \Delta x_n \bigr)^{\{k\}} \textit{f}(x^{(0)}) + r_{m} (\Delta x), \eqno (39.20)$$
+	   
+	    \noindent \textit {где $r_{m} (\Delta x) $ можно записать в каждом из следующих видов:}
+	    
+	    \textit {либо}
+	    	$$r_{m}(\Delta x) = \sum\limits_{m_1+ ... +m_n = m} \varepsilon_{m_1 ... m_n}(\Delta x) 
+	    	\Delta x_1^{m_1} ... \Delta x_n^{m_n}, \eqno (39.21)$$
+	     	
+	    \noindent \textit {где}
+	    $$\lim_{\rho \to 0} \varepsilon_{m_1, ..., m_n}(\Delta x) = 0, \quad
+	    \rho = \sqrt{\sum\limits_{i=1}^n \Delta x_i^{2}},$$
+	    
+	    \textit {либо} 
+	    
+	    $$r_{m} (\Delta x) = \varepsilon (\Delta x) \rho^m,\quad \lim_{\rho \to 0} \varepsilon(\Delta x) = 0, \eqno (39.22) $$
+	    
+	    \noindent \textit {т.е.} 	
+	    	$$r_{m} (\Delta x) = o(\rho^m),\quad \rho \to 0.$$
+	    	
+	    \textit {Наконец, через дифференциалы формулу (39.20) можно за- \linebreak писать в виде}
+	    	$$\Delta y = \sum\limits_{k = 1}^{m} \frac{1}{k!} d^k \textit{f}(x^{(0)}) + r_{m} (\Delta x). \eqno (39.23)$$	
+	\end{spacing}
+		\vfill {
+			\begin{spacing}{0.4}	
+	   			\noindent\line(1,0){45}
+	    		\linebreak
+
+	    		\footnotesize{*) Эти ограничения можно несколько ослабить аналогично тому, как это было указано выше в случае функций двух переменных.}
+			\end {spacing}	
+		}
+\end{document}
